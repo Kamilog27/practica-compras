@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-5">PRODUCTOS</h1>
+    <div class="row">
+            <div class="col-lg-3 card"  *ngFor="let product of products">
+                <div class="card-body" >
+                    <img class="d-flex justify-content-center" src="{{product.image}}" title="{{product.title}}">
+                    <h5 class="card-title text-center">
+                        {{product.title}}
+                    </h5>
+                </div>
+                <a class="btn btn-success mb-2 w-10" [routerLink]="['/product',product.id]">Ver producto</a>
+            </div>
+        </div>
+    </div>
